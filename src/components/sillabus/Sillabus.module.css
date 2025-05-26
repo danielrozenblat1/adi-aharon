@@ -1,0 +1,331 @@
+.syllabusContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 20px;
+  
+
+  font-family: 'AssistantR';
+  direction: rtl;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 1px solid rgba(134, 85, 69, 0.2);
+  box-shadow: 
+    0 8px 32px rgba(134, 85, 69, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.mainTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #865545;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 4px rgba(134, 85, 69, 0.2);
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  color: #865545;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+.courseInfo {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.courseInfo span {
+  padding: 0.5rem 1rem;
+  background: #865545;
+  color: white;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.expandButtonContainer {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.expandButton {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.2rem 2.5rem;
+  background: rgba(134, 85, 69, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 2px solid rgba(134, 85, 69, 0.3);
+  border-radius: 50px;
+  color: #865545;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(134, 85, 69, 0.15);
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
+  font-family: 'AssistantR', Arial, sans-serif;
+}
+
+.expandButton:hover {
+  background: rgba(134, 85, 69, 0.25);
+  border-color: rgba(134, 85, 69, 0.5);
+  color: #6b412f;
+  transform: translateY(-2px);
+  box-shadow: 0 15px 40px rgba(134, 85, 69, 0.2);
+}
+
+.expandButton:active {
+  transform: translateY(0);
+  box-shadow: 0 8px 25px rgba(134, 85, 69, 0.15);
+}
+
+.expandIcon {
+  width: 22px;
+  height: 22px;
+  transition: transform 0.3s ease;
+}
+
+.expandButton:hover .expandIcon {
+  transform: scale(1.1);
+}
+
+.sessionsContainer {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sessionCard {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1px solid rgba(134, 85, 69, 0.2);
+  box-shadow: 
+    0 8px 32px rgba(134, 85, 69, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.sessionCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+}
+
+.sessionCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 12px 40px rgba(134, 85, 69, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    0 2px 8px rgba(0, 0, 0, 0.1);
+  border-color: rgba(134, 85, 69, 0.3);
+}
+
+.sessionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.sessionNumber {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #865545;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 15px;
+  border: 1px solid rgba(134, 85, 69, 0.3);
+}
+
+.iconContainer {
+  padding: 0.8rem;
+  background: #865545;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(134, 85, 69, 0.3);
+}
+
+.sessionIcon {
+  width: 24px;
+  height: 24px;
+  color: white;
+}
+
+.sessionTitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #865545;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.quoteContainer {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: rgba(134, 85, 69, 0.2);
+  border-radius: 15px;
+  border-right: 4px solid #865545;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(134, 85, 69, 0.1);
+}
+
+.sessionQuote {
+  font-style: italic;
+  color: #865545;
+  font-size: 1rem;
+  margin: 0;
+  text-align: center;
+  font-weight: 600;
+}
+
+.contentContainer {
+  margin-top: 1.5rem;
+}
+
+.contentItem {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  padding: 0.3rem 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  font-weight: 500;
+}
+
+.contentIconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  margin-top: 0.1rem;
+}
+
+.contentIcon {
+  width: 16px;
+  height: 16px;
+  color: #865545;
+}
+
+.contentText {
+  color: #865545;
+  flex: 1;
+}
+
+.contentItem:hover .contentIcon {
+  color: #d8c7c2;
+  transition: color 0.2s ease;
+}
+
+.contentItem:hover .contentText {
+  color: #d8c7c2;
+  transition: color 0.2s ease;
+}
+
+/* רספונסיביות */
+@media (max-width: 768px) {
+  .syllabusContainer {
+    padding: 1rem;
+  }
+  
+  .sessionsContainer {
+    grid-template-columns: 1fr;
+  }
+  
+  .mainTitle {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .courseInfo {
+    gap: 1rem;
+  }
+  
+  .courseInfo span {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .sessionCard {
+    padding: 1.5rem;
+  }
+  
+  .expandButton {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+  
+  .expandIcon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sessionHeader {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    text-align: right;
+  }
+  
+  .courseInfo {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .expandButton {
+    padding: 0.9rem 1.5rem;
+    font-size: 0.95rem;
+    gap: 0.6rem;
+  }
+  
+  .expandIcon {
+    width: 18px;
+    height: 18px;
+  }
+}

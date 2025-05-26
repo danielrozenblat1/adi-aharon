@@ -1,0 +1,339 @@
+/* GlassCard.module.css - Responsive Version */
+
+.card {
+    position: relative;
+    width: 300px;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    margin:2% auto;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(255, 249, 248, 0.7) 0%, rgba(236, 219, 215, 0.6) 50%, rgba(134, 85, 69, 0.4) 100%);
+    box-shadow: 0 10px 30px rgba(134, 85, 69, 0.12);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(134, 85, 69, 0.18);
+}
+
+.glassEffect {
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 1;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: row-reverse;
+}
+
+.iconContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.icon {
+    color: rgba(134, 85, 69, 0.9);
+    width: 100%;
+    height: 100%;
+}
+
+.title {
+    margin: 0;
+    font-family: 'AssistantR', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgba(24, 24, 27, 0.9);
+    text-align: right;
+}
+
+.description {
+    margin: 0;
+    font-family: 'AssistantR', sans-serif;
+    font-size: 1.1rem;
+    color: rgba(24, 24, 27, 0.75);
+    font-weight: 400;
+}
+
+/* Responsive Breakpoints */
+
+/* מתחת ל-350px */
+@media screen and (max-width: 349px) {
+    .card {
+        width: 260px;
+        padding: 1.6rem;
+        border-radius: 0.8rem;
+    }
+    
+    .content {
+        gap: 1.1rem;
+    }
+    
+    .iconContainer {
+        width: 2.6rem;
+        height: 2.6rem;
+    }
+    
+    .title {
+        font-size: 1.1rem;
+    }
+    
+    .description {
+        font-size: 0.9rem;
+    }
+}
+
+/* 350px - 450px */
+@media screen and (min-width: 350px) and (max-width: 450px) {
+    .card {
+        width: 275px;
+        padding: 1.8rem;
+        border-radius: 0.9rem;
+    }
+    
+    .content {
+        gap: 1.2rem;
+    }
+    
+    .iconContainer {
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+    
+    .title {
+        font-size: 1.2rem;
+    }
+    
+    .description {
+        font-size: 0.95rem;
+    }
+}
+
+/* 450px - 550px */
+@media screen and (min-width: 450px) and (max-width: 550px) {
+    .card {
+        width: 320px;
+        padding: 2.2rem;
+        border-radius: 1rem;
+    }
+    
+    .content {
+        gap: 1.4rem;
+    }
+    
+    .iconContainer {
+        width: 3.2rem;
+        height: 3.2rem;
+    }
+    
+    .title {
+        font-size: 1.4rem;
+    }
+    
+    .description {
+        font-size: 1.05rem;
+    }
+}
+
+/* 550px - 650px */
+@media screen and (min-width: 550px) and (max-width: 650px) {
+    .card {
+        width: 340px;
+        padding: 2.3rem;
+        border-radius: 1rem;
+    }
+    
+    .content {
+        gap: 1.45rem;
+    }
+    
+    .iconContainer {
+        width: 3.3rem;
+        height: 3.3rem;
+    }
+    
+    .title {
+        font-size: 1.45rem;
+    }
+    
+    .description {
+        font-size: 1.08rem;
+    }
+}
+
+/* 650px - 750px */
+@media screen and (min-width: 650px) and (max-width: 750px) {
+    .card {
+        width: 360px;
+        padding: 2.4rem;
+        border-radius: 1.1rem;
+    }
+    
+    .content {
+        gap: 1.5rem;
+    }
+    
+    .iconContainer {
+        width: 3.4rem;
+        height: 3.4rem;
+    }
+    
+    .title {
+        font-size: 1.5rem;
+    }
+    
+    .description {
+        font-size: 1.1rem;
+    }
+}
+
+/* 750px - 850px */
+@media screen and (min-width: 750px) and (max-width: 850px) {
+    .card {
+        width: 380px;
+        padding: 2.6rem;
+        border-radius: 1.1rem;
+    }
+    
+    .content {
+        gap: 1.6rem;
+    }
+    
+    .iconContainer {
+        width: 3.6rem;
+        height: 3.6rem;
+    }
+    
+    .title {
+        font-size: 1.55rem;
+    }
+    
+    .description {
+        font-size: 1.12rem;
+    }
+}
+
+/* 850px - 950px */
+@media screen and (min-width: 850px) and (max-width: 950px) {
+    .card {
+        width: 400px;
+        padding: 2.7rem;
+        border-radius: 1.2rem;
+    }
+    
+    .content {
+        gap: 1.7rem;
+    }
+    
+    .iconContainer {
+        width: 3.7rem;
+        height: 3.7rem;
+    }
+    
+    .title {
+        font-size: 1.6rem;
+    }
+    
+    .description {
+        font-size: 1.15rem;
+    }
+}
+
+/* 950px - 1050px */
+@media screen and (min-width: 950px) and (max-width: 1050px) {
+    .card {
+        width: 420px;
+        padding: 2.8rem;
+        border-radius: 1.2rem;
+    }
+    
+    .content {
+        gap: 1.8rem;
+    }
+    
+    .iconContainer {
+        width: 3.8rem;
+        height: 3.8rem;
+    }
+    
+    .title {
+        font-size: 1.65rem;
+    }
+    
+    .description {
+        font-size: 1.18rem;
+    }
+}
+
+/* 1050px - 1150px */
+@media screen and (min-width: 1050px) and (max-width: 1150px) {
+    .card {
+        width: 440px;
+        padding: 2.9rem;
+        border-radius: 1.3rem;
+    }
+    
+    .content {
+        gap: 1.9rem;
+    }
+    
+    .iconContainer {
+        width: 3.9rem;
+        height: 3.9rem;
+    }
+    
+    .title {
+        font-size: 1.7rem;
+    }
+    
+    .description {
+        font-size: 1.2rem;
+    }
+}
+
+/* 1150px - 1250px */
+@media screen and (min-width: 1150px) and (max-width: 1250px) {
+    .card {
+        width: 460px;
+        padding: 3rem;
+        border-radius: 1.3rem;
+    }
+    
+    .content {
+        gap: 2rem;
+    }
+    
+    .iconContainer {
+        width: 4rem;
+        height: 4rem;
+    }
+    
+    .title {
+        font-size: 1.75rem;
+    }
+    
+    .description {
+        font-size: 1.22rem;
+    }
+}
+

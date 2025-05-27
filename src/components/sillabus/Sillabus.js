@@ -77,7 +77,7 @@ const Syllabus = () => {
   return (
     <div className={styles.syllabusContainer}>
       <div className={styles.header}>
-        <h1 className={styles.mainTitle}>מספיק דיבורים - ככה זה הולך לעבוד -</h1>
+        <h1 className={styles.mainTitle}>ככה זה הולך לעבוד</h1>
         <h2 className={styles.subtitle}>הדרך שלך לקריירה רווחית בעולם הציפורניים</h2>
         <div className={styles.courseInfo}>
           <span>4 מפגשים</span>

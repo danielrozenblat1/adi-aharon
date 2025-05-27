@@ -20,7 +20,7 @@ const FormScreen = () => {
 
   // Server settings
   const serverUrl = "https://dynamic-server-dfc88e1f1c54.herokuapp.com/leads/newLead";
-  const reciver = "adiaharon@gmail.com";
+  const reciver = "adikaacademy@gmail.com";
 
   // Handle form submission
   const handleSubmit = async (e) => {

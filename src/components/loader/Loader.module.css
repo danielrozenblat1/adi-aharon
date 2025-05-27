@@ -1,100 +1,90 @@
-.container {
+.typing-indicator {
+  width: 60px;
+  height: 30px;
+  position: relative;
+  z-index: 4;
+}
+.container{
   height: 100vh;
+  width: 100vw;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #FFF9F9;
 }
-
-.heartContainer {
-  position: relative;
-  width: 60px;
-  height: 60px;
-}
-
-.heart {
+.typing-circle {
+  width: 8px;
+  height: 8px;
   position: absolute;
-  width: 30px;
-  height: 30px;
-  background: #F4BFBF;
-  transform: rotate(45deg);
-  animation: heartBeat 1.5s ease-in-out infinite;
-}
-
-.heart:before,
-.heart:after {
-  content: '';
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  background: #F4BFBF;
   border-radius: 50%;
+  background-color: #000;
+  left: 15%;
+  transform-origin: 50%;
+  animation: typing-circle7124 0.5s alternate infinite ease;
 }
 
-.heart:before {
-  left: -15px;
+@keyframes typing-circle7124 {
+  0% {
+    top: 20px;
+    height: 5px;
+    border-radius: 50px 50px 25px 25px;
+    transform: scaleX(1.7);
+  }
+  40% {
+    height: 8px;
+    border-radius: 50%;
+    transform: scaleX(1);
+  }
+  100% {
+    top: 0%;
+  }
 }
 
-.heart:after {
-  top: -15px;
+.typing-circle:nth-child(2) {
+  left: 45%;
+  animation-delay: 0.2s;
 }
 
-.sparkle {
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  background: #FFE4E4;
+.typing-circle:nth-child(3) {
+  left: auto;
+  right: 15%;
+  animation-delay: 0.3s;
+}
+
+.typing-shadow {
+  width: 5px;
+  height: 4px;
   border-radius: 50%;
-  animation: sparkleFloat 1.5s ease-in-out infinite;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 30px;
+  transform-origin: 50%;
+  z-index: 3;
+  left: 15%;
+  filter: blur(1px);
+  animation: typing-shadow046 0.5s alternate infinite ease;
 }
 
-.sparkle:nth-child(2) {
-  left: 40px;
-  top: 10px;
-}
-
-.sparkle:nth-child(3) {
-  left: 20px;
-  top: -10px;
-}
-
-.sparkle:nth-child(4) {
-  left: 0;
-  top: 10px;
-}
-
-@keyframes heartBeat {
-  0%, 100% {
-    transform: rotate(45deg) scale(1);
+@keyframes typing-shadow046 {
+  0% {
+    transform: scaleX(1.5);
   }
-  15% {
-    transform: rotate(45deg) scale(1.15);
+  40% {
+    transform: scaleX(1);
+    opacity: 0.7;
   }
-  30% {
-    transform: rotate(45deg) scale(1);
-  }
-  45% {
-    transform: rotate(45deg) scale(1.15);
+  100% {
+    transform: scaleX(0.2);
+    opacity: 0.4;
   }
 }
 
-@keyframes sparkleFloat {
-  0%, 100% {
-    transform: scale(0.8);
-    opacity: 0.3;
-  }
-  50% {
-    transform: scale(1.2);
-    opacity: 0.8;
-  }
+.typing-shadow:nth-child(4) {
+  left: 45%;
+  animation-delay: 0.2s;
 }
 
-.text {
-  margin-top: 24px;
-  font-family: "AssistantR", sans-serif;
-  color: #CCA7A7;
-  font-size: 18px;
-  direction: rtl;
-
+.typing-shadow:nth-child(5) {
+  left: auto;
+  right: 15%;
+  animation-delay: 0.3s;
 }

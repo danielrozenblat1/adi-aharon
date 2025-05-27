@@ -1,7 +1,7 @@
 import GlassEffectCard from "../components/glassBox/GlassBox"
 import styles from "./SecondScreen.module.css"
 import heart from "../icons/wired-outline-414-money-bag-dollar-hover-shake (1).json"
-import business from "../icons/wired-outline-1010-department-hover-pinch.json"
+import business from "../icons/wired-outline-633-female-standing-hover-success (2).json"
 import clock from "../icons/wired-outline-236-alarm-clock-hover-pinch.json"
 const SecondScreen=()=>{
 

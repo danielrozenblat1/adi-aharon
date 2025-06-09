@@ -10,9 +10,9 @@ return <>
     <div className={styles.description}>יש לך תשוקה לתחום הביוטי כבר תקופה ארוכה אבל בזמן האחרון החלטת שהגיע הזמן לקחת אותה  <div className={styles.bold}>צעד אחד קדימה</div></div>
     <div className={styles.title}>ולהתחיל..</div>
     <div className={styles.row}>
-<GlassEffectCard title="להכניס סכומים שפעם רק חלמת עליהם" description="תחום הביוטי מציע פוטנציאל הכנסה גבוה - עם טכניקה נכונה ולקוחות קבועות אפשר להגיע לרמות הכנסה מרשימות" icon={heart}/>
-<GlassEffectCard title="לקום כל בוקר להגשמה עצמית" description="במקום לעבוד עבור מישהו אחר ולהיות חייבת לו דין וחשבון, את תתעוררי כל יום לעבוד על החלום שלך ולבנות את העתיד שלך" icon={business}/>
-<GlassEffectCard title="לנהל את החיים של עצמך" description="לקבוע את השעות שלך, לבחור את הלקוחות שלך ולהיות אדון לעצמך - ליצור לעצמך חופש אמיתי בניהול הזמן והחיים" icon={clock}/>
+<GlassEffectCard title="להכניס סכומים שפעם רק חלמת עליהם" description="תחום הביוטי מציע פוטנציאל הכנסה גבוה - עם טכניקה נכונה ולקוחות קבועות אפשר להגיע לרמות הכנסה גבוהות מאוד" icon={heart}/>
+<GlassEffectCard title="לקום כל בוקר להגשמה עצמית" description="במקום לעבוד עבור מישהו אחר, להיות חייבת לו דין וחשבון ולהרוויח עבורו כסף -  את תתעוררי כל יום לעבוד על החלום שלך ולבנות את העתיד שלך" icon={business}/>
+<GlassEffectCard title="להיות אדון לעצמך" description="לקבוע את השעות שלך, לבחור את הלקוחות שלך וליצור לעצמך חופש אמיתי בניהול הזמן והחיים" icon={clock}/>
     </div>
     <div className={styles.description}>תכלס.. אני מבינה את הסקרנות שלך!</div>
     <div className={styles.titleContainer}>

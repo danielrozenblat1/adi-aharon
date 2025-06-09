@@ -31,7 +31,7 @@ const Syllabus = () => {
         { text: "הסבר מעמיק על מנורת הייבוש: ההבדלים בין המנורות הקיימות", icon: <Lightbulb className={styles.contentIcon} /> },
         { text: "היכרות עם ציוד העבודה: מכונת שיוף, ראשי שיוף, פצירות", icon: <Wrench className={styles.contentIcon} /> },
         { text: "סטריליזציה וסביבה בטוחה לעבודה נקייה", icon: <Sparkles className={styles.contentIcon} /> },
-        { text: "ערכת התחלה חובה – מה את צריכה כדי להתחיל להרוויח", icon: <Star className={styles.contentIcon} /> }
+   
       ]
     },
     {
@@ -77,7 +77,7 @@ const Syllabus = () => {
   return (
     <div className={styles.syllabusContainer}>
       <div className={styles.header}>
-        <h1 className={styles.mainTitle}>ככה זה הולך לעבוד</h1>
+        <h1 className={styles.mainTitle}>ככה זה הולך לעבוד - קורס מתחילות</h1>
         <h2 className={styles.subtitle}>הדרך שלך לקריירה רווחית בעולם הציפורניים</h2>
         <div className={styles.courseInfo}>
           <span>4 מפגשים</span>

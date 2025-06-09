@@ -9,9 +9,11 @@ import AboutMe from './components/me/Me';
 import ForthScreen from './screens/ForthScreen';
 import FifthScreen from './screens/FifthScreen';
 import ByMe from './components/ByMe/ByMe';
+import NavBarNew from './components/CourseNav/NavBarNew';
 
 function App() {
   return <>
+  <NavBarNew/>
   <FirstScreen/>
   <SecondScreen/>
   <ModelViewer/>

@@ -112,7 +112,7 @@ const FormScreen = () => {
     <div className={styles.formScreenContainer} id="טופס">
       <div className={styles.titleContainer}>
 
-        <div className={styles.title}>הדרך שלך מתחילה כאן</div>
+        <div className={styles.title}>הדרך שלנו מתחילה כאן</div>
       </div>
       
       <div className={styles.formContainer}>

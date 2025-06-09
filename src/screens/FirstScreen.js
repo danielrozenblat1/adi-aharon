@@ -45,7 +45,7 @@ const FirstScreen = () => {
       <div className={styles.contentBox}>
         <h1 className={styles.title}>ADI AHARON</h1>
   
-        <div className={styles.description}>הכשרות בתחום הציפורניים עם דגש מיוחד על אלרגיות והתחומים שלא כולן יספרו לך עליהם </div>
+        <div className={styles.description}>הכשרות בתחום הציפורניים עם דגש במיוחד על אלרגיות והתחומים שלא כולן יספרו לך עליהם </div>
       </div>
     </div>
   );

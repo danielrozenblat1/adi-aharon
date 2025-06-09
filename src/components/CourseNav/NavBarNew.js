@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link as ScrollLink } from "react-scroll";
 import styles from './NavBarNew.module.css';
+import logo from "../../images/עדי אהרון לוגו.png"
 
 import { FaTimes } from 'react-icons/fa';
 
@@ -44,7 +45,9 @@ const NavBarNew = () => {
       ${isVisible ? styles.visible : styles.hidden}
     `}>
       <div className={styles.navbarInner}>
-   
+        <div className={styles.logo}>
+          <img src={logo} alt="Logo" />
+        </div>
         
         <ScrollLink
           to="טופס"
@@ -54,8 +57,8 @@ const NavBarNew = () => {
           className={styles.menuButton}
         >
           <div className={styles.buttonContent}>
-            <span className={styles.buttonText}>עדי, אני בפנים!</span>
-            <span className={styles.buttonTextHover}>עדי, אני בפנים!</span>
+            <span className={styles.buttonText}>עדי, תחזרי אלי!</span>
+            <span className={styles.buttonTextHover}>עדי, תחזרי אלי!</span>
           </div>
         </ScrollLink>
       </div>
@@ -66,10 +69,14 @@ const NavBarNew = () => {
             <div className={styles.closeButton} onClick={toggleMenu}>
               <FaTimes />
             </div>
-    
+            <div className={styles.mobileMenuLogo}>
+              <img src={logo} alt="עדי אהרון לוגו"/>
+            </div>
           </div>
           <div className={styles.mobileMenuContent}>
-     
+            <div className={styles.mobileLogo}>
+              <img src={logo} alt="Logo" />
+            </div>
           </div>
         </div>
       )}

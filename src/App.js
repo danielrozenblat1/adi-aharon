@@ -10,14 +10,15 @@ import ForthScreen from './screens/ForthScreen';
 import FifthScreen from './screens/FifthScreen';
 import ByMe from './components/ByMe/ByMe';
 import NavBarNew from './components/CourseNav/NavBarNew';
+import Four from './components/Four/Four';
 
 function App() {
   return <>
   <NavBarNew/>
   <FirstScreen/>
   <SecondScreen/>
-  <ModelViewer/>
-  <FormScreen/>
+ <Four/>
+ 
   <AboutMe/>
   <ThirdScreen/>
 <ForthScreen/>

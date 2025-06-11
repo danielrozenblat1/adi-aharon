@@ -54,11 +54,8 @@ const FormScreen = () => {
     }
 
     // Validate reason
-    if (!reason.trim()) {
-      newErrors.reason = 'נא להזין סיבת פנייה';
-      valid = false;
-    } else if (reason.trim().length < 5) {
-      newErrors.reason = 'סיבת הפנייה חייבת להכיל לפחות 5 תווים';
+    if (!reason || reason === '') {
+      newErrors.reason = 'נא לבחור סיבת פנייה';
       valid = false;
     }
 
@@ -111,7 +108,6 @@ const FormScreen = () => {
   return (
     <div className={styles.formScreenContainer} id="טופס">
       <div className={styles.titleContainer}>
-
         <div className={styles.title}>הדרך שלנו מתחילה כאן</div>
       </div>
       
@@ -147,15 +143,20 @@ const FormScreen = () => {
           
           <div className={styles.formGroup}>
             <label className={styles.label} htmlFor="reason">סיבת הפנייה</label>
-            <textarea
+            <select
               id="reason"
               name="reason"
-              className={`${styles.textarea} ${errors.reason ? styles.inputError : ''}`}
-              placeholder="ספרו לי במה אוכל לעזור לכם"
-              rows={4}
-              disabled={isSubmitting || submitted}
+              className={`${styles.input} ${errors.reason ? styles.inputError : ''}`}
               ref={reasonRef}
-            />
+              defaultValue=""
+              disabled={isSubmitting || submitted}
+            >
+              <option value="" disabled>בחרי סיבת פנייה</option>
+              <option value="קורס מתחילות">קורס מתחילות</option>
+              <option value="קורס בנייה טיפסים הפוכים">קורס בנייה טיפסים הפוכים</option>
+              <option value="השלמות לאלרגיות">השלמות לאלרגיות</option>
+              <option value="השתלמות העלאת רמה">השתלמות העלאת רמה</option>
+            </select>
             {errors.reason && <p className={styles.errorText}>{errors.reason}</p>}
           </div>
           

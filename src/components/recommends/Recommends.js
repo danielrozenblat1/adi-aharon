@@ -35,7 +35,7 @@ const Recommendations = () => {
 
   return (
     <>
-      <div className={styles.title}>הדרכתי עשרות נשים</div>
+      <div className={styles.title}>והדרכתי עשרות נשים לקריירה רווחית בתחום</div>
       <div className={styles.explain}>
         תחליקי בין התמונות
       </div>

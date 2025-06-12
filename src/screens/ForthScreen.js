@@ -6,17 +6,21 @@ import FormScreen from "../formScreen/FormScreen";
 import styles from "./ForthScreen.module.css"
 const ForthScreen=()=>{
 const videoIds = [
+           "8gYZjz6skNA", 
     "a9qaLQZvTG0",
-    "8gYZjz6skNA", 
-    "mGfNvUExX2o",
-    "s_0SahQWJHI"
+ 
+        "mGfNvUExX2o",
+      "s_0SahQWJHI",
+
+
+  
 ];
  return <>
 
 
 <CourseDrawer/>
      
-            <div className={styles.description}>הכנתי לך טעימה קצרה מהשיעורים איתי, מוזמנת ללחוץ על כל סרטון</div>
+            <div className={styles.description}>הכנתי לך טעימה קצרה מהשיעורים איתי ומהחוויה שכל תלמידה שלי עוברת, לצפייה בסרטונים - פשוט תלחצי עליהם</div>
  <YoutubeCarousel videoIds={videoIds}/>
  <FormScreen/>
     </>

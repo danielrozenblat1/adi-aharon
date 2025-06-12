@@ -25,16 +25,16 @@ import result19 from "../../images/עדי אהרון עבודות 19.png";
 
 const Works = () => {
   const images = [
-    result1, result2, result3, result4, result5, 
-    result6, result7, result8, result9, result10, 
-    result11, result12, result13, result14, result15, 
-    result16, result17, result18, result19
+    result1, result17,result2, result3, result4,result15, 
+    result6,  result7, result8, result9, result13, result10,
+     result5, result14, 
+   result18, result19,result11, result16 ,result12, 
   ];
 
   return (
     <>
       <div className={styles.title}>
-       הוצאתי אלפי נשים מרוצות
+       הוצאתי עד היום אלפי נשים מרוצות
       </div>
 
       <div className={styles.container}>

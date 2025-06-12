@@ -155,7 +155,7 @@ const FormScreen = () => {
               <option value="קורס מתחילות">קורס מתחילות</option>
               <option value="קורס בנייה טיפסים הפוכים">קורס בנייה טיפסים הפוכים</option>
               <option value="השלמות לאלרגיות">השלמות לאלרגיות</option>
-              <option value="השתלמות העלאת רמה">השתלמות העלאת רמה</option>
+              <option value="השתלמות העלאת רמה/ קיצור זמנים">השתלמות העלאת רמה/ קיצור זמנים</option>
             </select>
             {errors.reason && <p className={styles.errorText}>{errors.reason}</p>}
           </div>

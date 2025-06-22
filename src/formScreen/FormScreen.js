@@ -171,7 +171,7 @@ const FormScreen = () => {
           </div>
 
           <div className={styles.formGroup}>
-            <label className={styles.label} htmlFor="freeText">הודעה נוספת (רשות)</label>
+            <label className={styles.label} htmlFor="freeText">פירוט (רשות)</label>
             <textarea
               id="freeText"
               name="freeText"

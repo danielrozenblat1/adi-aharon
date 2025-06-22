@@ -21,13 +21,13 @@ const Syllabus = () => {
       title: "יסודות המקצוע ובניית בסיס בריא לעבודה",
       quote: "היסוד הוא הכל - בלי בסיס חזק, אין בניין יציב",
       content: [
-        { text: "תיאוריה מקצועית: הכרה והבנת מבנה הציפורן, עור ותגובות עור נפוצות", icon: <Brain className={styles.contentIcon} /> },
+        { text: "תיאוריה מקצועית: הכרה והבנת מבנה ציפורן, העור ותגובות עור נפוצות", icon: <Brain className={styles.contentIcon} /> },
         { text: "מחלות עור וציפורניים בדגש על אלרגיות – נושא חובה לכל מקצועית", icon: <AlertTriangle className={styles.contentIcon} /> },
-        { text: "איך לזהות אלרגיה ולמה חשוב לא להתעלם?", icon: <Search className={styles.contentIcon} /> },
-        { text: "מה הגורמים להתפתחותה של האלרגיה?", icon: <Zap className={styles.contentIcon} /> },
+        { text: "איך לזהות אלרגיה ולמה אסור להתעלם ממנה?", icon: <Search className={styles.contentIcon} /> },
+        { text: "הגורמים לאלרגיה - איך היא מתפתחת ומהן הסכנות", icon: <Zap className={styles.contentIcon} /> },
         { text: "עבודה בטוחה ונכונה כדי להימנע אלרגיות", icon: <Shield className={styles.contentIcon} /> },
         { text: "הכרת רכיבים אלרגניים בג'לים בהרחבה – כולל HEMA, TPO וחומרים נוספים", icon: <Microscope className={styles.contentIcon} /> },
-        { text: "סוגי הג'ל השונים: ג'ל בסיס, ג׳ל בנייה, צבע, טופ", icon: <Package className={styles.contentIcon} /> },
+        { text: "סוגי הג'ל השונים והתאמת סוג החומר: ג'ל בסיס, ג׳ל בנייה ועוד.", icon: <Package className={styles.contentIcon} /> },
         { text: "הסבר מעמיק על מנורת הייבוש: ההבדלים בין המנורות הקיימות", icon: <Lightbulb className={styles.contentIcon} /> },
         { text: "היכרות עם ציוד העבודה: מכונת שיוף, ראשי שיוף, פצירות", icon: <Wrench className={styles.contentIcon} /> },
         { text: "סטריליזציה וסביבה בטוחה לעבודה נקייה", icon: <Sparkles className={styles.contentIcon} /> },
@@ -44,8 +44,8 @@ const Syllabus = () => {
         { text: "תרגול על ציפורניים מלאכותיות:", icon: <Target className={styles.contentIcon} /> },
         { text: "הנחה ומריחת לק ג'ל בצורה אחידה", icon: <Paintbrush className={styles.contentIcon} /> },
         { text: "הסרת החומר בלי לפגוע בציפורן", icon: <Eraser className={styles.contentIcon} /> },
-        { text: "עבודה על מודליסטית בשיטת עבודה מותאמת ללקוחות עם אלרגיות:", icon: <UserCheck className={styles.contentIcon} /> },
-        { text: "טכניקה ייחודית שפיתחתי – ליישום בטוח, יעיל ורווחי", icon: <Award className={styles.contentIcon} /> },
+        { text: "תרגול על מודליסטית בטכניקה ייחודית שפיתחתי בהתאמה מלאה ללקוחות אלרגיות", icon: <UserCheck className={styles.contentIcon} /> },
+     
         { text: "תרגול שלב אחר שלב עם ליווי צמוד", icon: <CheckCircle className={styles.contentIcon} /> }
       ]
     },
@@ -55,9 +55,9 @@ const Syllabus = () => {
       title: "תיקון מבנה אנטומי – המקפצה המקצועית שלך",
       quote: "כשאת יודעת לתקן מבנה, את הופכת לאמנית אמיתית",
       content: [
-        { text: "לימוד ותרגול של שיטת תיקון המבנה האנטומי הטבעי:", icon: <BookOpen className={styles.contentIcon} /> },
+        { text: "לימוד ותרגול של שיטת תיקון המבנה האנטומי הטבעי", icon: <BookOpen className={styles.contentIcon} /> },
         { text: "איך משחזרים מבנה אחיד, חזק ובריא גם בציפורניים פגועות", icon: <Repeat className={styles.contentIcon} /> },
-        { text: "תרגול מקיף על מודליסטית עם דגש על דיוק, אחידות ועבודה נכונה עם החומרים המתאימים", icon: <Focus className={styles.contentIcon} /> }
+        { text: "תרגול מעשי על מודליסטית עם דגש על דיוק, אחידות והתאמת החומרים", icon: <Focus className={styles.contentIcon} /> }
       ]
     },
     {
@@ -68,7 +68,7 @@ const Syllabus = () => {
       content: [
         { text: "עבודה מלאה על מודליסטית – סימולציית לקוחה אמיתית:", icon: <Users className={styles.contentIcon} /> },
         { text: "טיפול מלא עם ליווי מקצועי שלי", icon: <Heart className={styles.contentIcon} /> },
-        { text: "איך לצלם נכון את העבודות שלך כדי למשוך לקוחות ברשתות:", icon: <Camera className={styles.contentIcon} /> },
+        { text: "איך לצלם נכון את העבודות שלך כדי למשוך לקוחות ברשתות", icon: <Camera className={styles.contentIcon} /> },
         { text: "זוית, תאורה, פריים – שהעבודה שלך תבלוט גם באינסטגרם וגם בעין של הלקוחה", icon: <Instagram className={styles.contentIcon} /> }
       ]
     }

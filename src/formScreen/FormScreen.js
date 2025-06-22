@@ -17,6 +17,7 @@ const FormScreen = () => {
   const fullNameRef = useRef(null);
   const phoneRef = useRef(null);
   const reasonRef = useRef(null);
+  const emailRef = useRef(null); // Using emailRef for free text
 
   // Server settings
   const serverUrl = "https://dynamic-server-dfc88e1f1c54.herokuapp.com/leads/newLead";
@@ -29,6 +30,12 @@ const FormScreen = () => {
     const name = fullNameRef.current.value;
     const phone = phoneRef.current.value;
     const reason = reasonRef.current.value;
+    const freeText = emailRef.current.value;
+    
+    // Combine reason with free text if provided
+    const finalReason = freeText.trim() 
+      ? `${reason}\nטקסט חופשי: ${freeText.trim()}`
+      : reason;
     
     // Validate inputs
     let valid = true;
@@ -59,6 +66,8 @@ const FormScreen = () => {
       valid = false;
     }
 
+    // Message is optional, so no validation needed
+
     setErrors(newErrors);
     
     if (!valid) {
@@ -71,8 +80,8 @@ const FormScreen = () => {
     const serverData = {
       name: name,
       phone: phone,
-      email: "", // Not required in this form but included in the API structure
-      reason: reason,
+      email: "אין", // Always "אין" - not using email field
+      reason: finalReason, // Combined reason with free text
       reciver: reciver
     };
 
@@ -93,6 +102,7 @@ const FormScreen = () => {
           fullNameRef.current.value = "";
           phoneRef.current.value = "";
           reasonRef.current.value = "";
+          emailRef.current.value = "";
           setSubmitted(false);
         }, 3000);
       } else {
@@ -153,11 +163,24 @@ const FormScreen = () => {
             >
               <option value="" disabled>בחרי סיבת פנייה</option>
               <option value="קורס מתחילות">קורס מתחילות</option>
-              <option value="קורס בנייה טיפסים הפוכים">קורס בנייה טיפסים הפוכים</option>
-              <option value="השלמות לאלרגיות">השלמות לאלרגיות</option>
+              <option value="קורס בניה בטיפסים הפוכים">קורס בניה בטיפסים הפוכים</option>
+              <option value="השתלמות לאלרגיות">השתלמות לאלרגיות</option>
               <option value="השתלמות העלאת רמה/ קיצור זמנים">השתלמות העלאת רמה/ קיצור זמנים</option>
             </select>
             {errors.reason && <p className={styles.errorText}>{errors.reason}</p>}
+          </div>
+
+          <div className={styles.formGroup}>
+            <label className={styles.label} htmlFor="freeText">הודעה נוספת (רשות)</label>
+            <textarea
+              id="freeText"
+              name="freeText"
+              className={styles.input}
+              placeholder="כאן תוכלי לכתוב פרטים נוספים או שאלות..."
+              disabled={isSubmitting || submitted}
+              ref={emailRef}
+              rows={4}
+            />
           </div>
           
           <button 

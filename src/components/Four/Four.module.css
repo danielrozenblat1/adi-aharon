@@ -2,9 +2,8 @@
 .container {
   position: relative;
   width: 100%;
-
   overflow-x: hidden;
-  background-color: #ECDBD7; /* רקע בהיר */
+
   border-radius: 100px; /* border-radius גדול לקונטיינר */
   padding: 50px 0;
 }
@@ -17,9 +16,18 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  /* רקע בהיר עם גרדיאנט עדין */
 
-  border-radius: 20px;
+  background: none;
+  border-radius: 0;
+}
+
+/* עיצוב מיוחד למסכים קטנים - פריסה אנכית */
+.mobileLayout {
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 40px 20px;
+  min-height: auto;
 }
 
 .glassPanel {
@@ -32,7 +40,7 @@
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   /* צל כהה */
-  box-shadow: 0 12px 40px rgba(134, 85, 69, 0.35); 
+  box-shadow: 0 12px 20px rgba(134, 85, 69, 0.35); 
   z-index: 20;
   direction: rtl;
   position: absolute;
@@ -106,29 +114,60 @@
 
 /* Responsive Design */
 
-/* מתחת ל350px */
+/* מתחת ל350px - פריסה אנכית ממורכזת */
 @media (max-width: 349px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+    gap: 40px;
+    min-height: auto;
+    height: auto;
+    border-radius: 30px;
+  }
+
+  .sectionWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: auto;
+    height: auto;
+    width: 100%;
+    padding: 0;
+    gap: 40px;
+    background: none;
+    border-radius: 0;
+  }
+
   .glassPanel {
-    width: 75%;
-    max-width: 300px;
+    position: static !important;
+    width: 70%;
+    max-width: 280px;
     padding: 1.5rem;
     background: rgba(134, 85, 69, 0.35);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     box-shadow: 0 15px 45px rgba(134, 85, 69, 0.45);
     border: 1px solid rgba(134, 85, 69, 0.55);
+    border-radius: 8px;
+    margin: 0;
+    left: auto !important;
+    top: auto !important;
+    right: auto !important;
+    transform: none !important;
   }
   
-  .rightSide {
-    top: 18%;
-  }
-  
-  .leftSide {
-    top: 42%;
-  }
-  
+  .rightSide,
+  .leftSide,
   .bottomRightSide {
-    top: 66%;
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
   }
   
   .content h2 {
@@ -148,29 +187,60 @@
   }
 }
 
-/* 350-450px */
+/* 350-450px - פריסה אנכית ממורכזת */
 @media (min-width: 350px) and (max-width: 449px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+    gap: 35px;
+    min-height: auto;
+    height: auto;
+    border-radius: 40px;
+  }
+
+  .sectionWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: auto;
+    height: auto;
+    width: 100%;
+   padding :20px 0;
+    gap: 35px;
+    background: none;
+    border-radius: 0;
+  }
+
   .glassPanel {
-    width: 72%;
-    max-width: 320px;
+    position: static !important;
+    width: 70%;
+    max-width: 300px;
     padding: 1.4rem;
     background: rgba(134, 85, 69, 0.32);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
     box-shadow: 0 14px 42px rgba(134, 85, 69, 0.42);
     border: 1px solid rgba(134, 85, 69, 0.52);
+    border-radius: 10px;
+    margin: 0;
+    left: auto !important;
+    top: auto !important;
+    right: auto !important;
+    transform: none !important;
   }
   
-  .rightSide {
-    top: 18%;
-  }
-  
-  .leftSide {
-    top: 42%;
-  }
-  
+  .rightSide,
+  .leftSide,
   .bottomRightSide {
-    top: 66%;
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
   }
   
   .content h2 {
@@ -190,29 +260,60 @@
   }
 }
 
-/* 450-550px */
+/* 450-550px - פריסה אנכית ממורכזת */
 @media (min-width: 450px) and (max-width: 549px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+    gap: 35px;
+    min-height: auto;
+    height: auto;
+    border-radius: 50px;
+  }
+
+  .sectionWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: auto;
+    height: auto;
+    width: 100%;
+    padding: 0;
+    gap: 35px;
+    background: none;
+    border-radius: 0;
+  }
+
   .glassPanel {
-    width: 70%;
-    max-width: 340px;
+    position: static !important;
+    width: 72%;
+    max-width: 320px;
     padding: 1.4rem;
     background: rgba(134, 85, 69, 0.28);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     box-shadow: 0 13px 38px rgba(134, 85, 69, 0.38);
     border: 1px solid rgba(134, 85, 69, 0.48);
+    border-radius: 10px;
+    margin: 0;
+    left: auto !important;
+    top: auto !important;
+    right: auto !important;
+    transform: none !important;
   }
   
-  .rightSide {
-    top: 19%;
-  }
-  
-  .leftSide {
-    top: 43%;
-  }
-  
+  .rightSide,
+  .leftSide,
   .bottomRightSide {
-    top: 67%;
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
   }
   
   .content h2 {
@@ -232,29 +333,60 @@
   }
 }
 
-/* 550-650px */
+/* 550-650px - פריסה אנכית ממורכזת */
 @media (min-width: 550px) and (max-width: 649px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+    gap: 35px;
+    min-height: auto;
+    height: auto;
+    border-radius: 60px;
+  }
+
+  .sectionWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: auto;
+    height: auto;
+    width: 100%;
+    padding: 0;
+    gap: 35px;
+    background: none;
+    border-radius: 0;
+  }
+
   .glassPanel {
-    width: 65%;
-    max-width: 360px;
+    position: static !important;
+    width: 75%;
+    max-width: 340px;
     padding: 1.5rem;
     background: rgba(134, 85, 69, 0.25);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     box-shadow: 0 12px 35px rgba(134, 85, 69, 0.35);
     border: 1px solid rgba(134, 85, 69, 0.45);
+    border-radius: 12px;
+    margin: 0;
+    left: auto !important;
+    top: auto !important;
+    right: auto !important;
+    transform: none !important;
   }
   
-  .rightSide {
-    top: 20%;
-  }
-  
-  .leftSide {
-    top: 44%;
-  }
-  
+  .rightSide,
+  .leftSide,
   .bottomRightSide {
-    top: 68%;
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
   }
   
   .content h2 {

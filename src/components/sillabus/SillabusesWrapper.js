@@ -3,6 +3,7 @@ import { GraduationCap, ChevronDown, ChevronUp } from 'lucide-react';
 import Syllabus from './Sillabus';
 import Hishtalmut from './Hishtalmut';
 import styles from './SillabusesWrapper.module.css';
+import Premium from './Premium';
 
 const CourseDrawer = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,6 +49,9 @@ const CourseDrawer = () => {
             </div>
             <div className={styles.courseWrapper}>
               <Hishtalmut />
+            </div>
+              <div className={styles.courseWrapper}>
+              <Premium />
             </div>
           </div>
         </div>

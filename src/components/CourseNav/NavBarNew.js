@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link as ScrollLink } from "react-scroll";
 import styles from './NavBarNew.module.css';
 import logo from "../../images/עדי אהרון לוגו.png"
-
-import { FaTimes } from 'react-icons/fa';
+import { FaTimes, FaInstagram, FaFacebookF } from 'react-icons/fa';
 
 const NavBarNew = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,6 +38,12 @@ const NavBarNew = () => {
     }
   };
 
+  // הוסף כאן את הקישורים לרשתות החברתיות שלך
+  const socialLinks = {
+    instagram: "https://www.instagram.com/adika.aharon/", // החלף בקישור האמיתי שלך
+    facebook: "https://www.facebook.com/akandinov" // החלף בקישור האמיתי שלך
+  };
+
   return (
     <nav className={`
       ${styles.navbar} 
@@ -47,6 +52,28 @@ const NavBarNew = () => {
       <div className={styles.navbarInner}>
         <div className={styles.logo}>
           <img src={logo} alt="Logo" />
+        </div>
+        
+        {/* אייקוני רשתות חברתיות */}
+        <div className={styles.socialIcons}>
+          <a 
+            href={socialLinks.instagram} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className={styles.socialIcon}
+            aria-label="עקבו אחרינו באינסטגרם"
+          >
+            <FaInstagram />
+          </a>
+          <a 
+            href={socialLinks.facebook} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className={styles.socialIcon}
+            aria-label="עקבו אחרינו בפייסבוק"
+          >
+            <FaFacebookF />
+          </a>
         </div>
         
         <ScrollLink
@@ -76,6 +103,29 @@ const NavBarNew = () => {
           <div className={styles.mobileMenuContent}>
             <div className={styles.mobileLogo}>
               <img src={logo} alt="Logo" />
+            </div>
+            {/* אייקוני רשתות חברתיות במובייל */}
+            <div className={styles.mobileSocialIcons}>
+              <a 
+                href={socialLinks.instagram} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className={styles.mobileSocialIcon}
+              
+              >
+                <FaInstagram />
+                <span>Instagram</span>
+              </a>
+              <a 
+                href={socialLinks.facebook} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className={styles.mobileSocialIcon}
+             
+              >
+                <FaFacebookF />
+                <span>Facebook</span>
+              </a>
             </div>
           </div>
         </div>

@@ -459,9 +459,9 @@
 
   /* אייקונים קטנים יותר במובייל */
   .socialIcon {
-    width: 30px;
-    height: 30px;
-    font-size: 0.8rem;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
   }
 
   .socialIcons {

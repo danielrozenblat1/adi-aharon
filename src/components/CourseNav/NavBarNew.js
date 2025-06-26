@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link as ScrollLink } from "react-scroll";
 import styles from './NavBarNew.module.css';
 import logo from "../../images/עדי אהרון לוגו.png"
-import { FaTimes, FaInstagram, FaFacebookF } from 'react-icons/fa';
+import { FaTimes, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 
 const NavBarNew = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -41,7 +41,7 @@ const NavBarNew = () => {
   // הוסף כאן את הקישורים לרשתות החברתיות שלך
   const socialLinks = {
     instagram: "https://www.instagram.com/adika.aharon/", // החלף בקישור האמיתי שלך
-    facebook: "https://www.facebook.com/akandinov" // החלף בקישור האמיתי שלך
+    whatsapp: "https://wa.me/972527482778?text=היי%20עדי,%20אשמח%20לשמוע%20עוד%20על%20הקורסים%20שלך..." // קישור לווצאפ עם הודעה
   };
 
   return (
@@ -66,13 +66,13 @@ const NavBarNew = () => {
             <FaInstagram />
           </a>
           <a 
-            href={socialLinks.facebook} 
+            href={socialLinks.whatsapp} 
             target="_blank" 
             rel="noopener noreferrer"
             className={styles.socialIcon}
-            aria-label="עקבו אחרינו בפייסבוק"
+            aria-label="צור קשר דרך ווצאפ"
           >
-            <FaFacebookF />
+            <FaWhatsapp />
           </a>
         </div>
         
@@ -111,20 +111,18 @@ const NavBarNew = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className={styles.mobileSocialIcon}
-              
               >
                 <FaInstagram />
                 <span>Instagram</span>
               </a>
               <a 
-                href={socialLinks.facebook} 
+                href={socialLinks.whatsapp} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className={styles.mobileSocialIcon}
-             
               >
-                <FaFacebookF />
-                <span>Facebook</span>
+                <FaWhatsapp />
+                <span>WhatsApp</span>
               </a>
             </div>
           </div>

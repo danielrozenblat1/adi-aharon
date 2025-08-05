@@ -48,15 +48,16 @@ const CourseDrawer = () => {
             <div className={styles.courseWrapper}>
               <Syllabus />
             </div>
+               <div className={styles.courseWrapper}>
+              <Allergies/>
+            </div>
             <div className={styles.courseWrapper}>
               <Hishtalmut />
             </div>
               <div className={styles.courseWrapper}>
               <Premium />
             </div>
-              <div className={styles.courseWrapper}>
-              <Allergies/>
-            </div>
+           
           </div>
         </div>
       )}

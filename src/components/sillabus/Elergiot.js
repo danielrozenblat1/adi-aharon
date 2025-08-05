@@ -76,7 +76,7 @@ const Allergies = () => {
         <h1 className={styles.mainTitle}>השתלמות אלרגיות ללק ג'ל</h1>
         <h2 className={styles.subtitle}>עבודה בטוחה ומקצועית עם לקוחות רגישות</h2>
         <div className={styles.courseInfo}>
-          <span>4 מפגשים</span>
+          <span>4 חלקים</span>
           <span>3 שעות סה"כ</span>
           <span>ידע מדעי + פתרונות מעשיים</span>
         </div>
@@ -85,17 +85,17 @@ const Allergies = () => {
           <button 
             className={styles.expandButton} 
             onClick={toggleExpanded}
-            aria-label={isExpanded ? "הסתר מפגשים" : "הצג מפגשים"}
+            aria-label={isExpanded ? "הסתר חלקים" : "הצג חלקים"}
           >
             {isExpanded ? (
               <>
                 <Minus className={styles.expandIcon} />
-                <span>לחצי כדי להסתיר את תיאור המפגשים</span>
+                <span>לחצי כדי להסתיר את תיאור החלקים</span>
               </>
             ) : (
               <>
                 <Plus className={styles.expandIcon} />
-                <span>לחצי כדי לצפות בכל המפגשים</span>
+                <span>לחצי כדי לצפות בכל החלקים</span>
               </>
             )}
           </button>
@@ -107,7 +107,7 @@ const Allergies = () => {
           {sessions.map((session) => (
             <div key={session.number} className={styles.sessionCard}>
               <div className={styles.sessionHeader}>
-                <div className={styles.sessionNumber}>מפגש {session.number}</div>
+                <div className={styles.sessionNumber}>חלק {session.number}</div>
                 <div className={styles.iconContainer}>
                   {session.icon}
                 </div>

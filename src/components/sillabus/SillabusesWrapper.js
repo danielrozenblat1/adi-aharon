@@ -4,6 +4,7 @@ import Syllabus from './Sillabus';
 import Hishtalmut from './Hishtalmut';
 import styles from './SillabusesWrapper.module.css';
 import Premium from './Premium';
+import Allergies from './Elergiot';
 
 const CourseDrawer = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,6 +53,9 @@ const CourseDrawer = () => {
             </div>
               <div className={styles.courseWrapper}>
               <Premium />
+            </div>
+              <div className={styles.courseWrapper}>
+              <Allergies/>
             </div>
           </div>
         </div>

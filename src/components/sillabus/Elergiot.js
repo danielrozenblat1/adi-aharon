@@ -76,8 +76,8 @@ const Allergies = () => {
         <h1 className={styles.mainTitle}>השתלמות אלרגיות ללק ג'ל</h1>
         <h2 className={styles.subtitle}>עבודה בטוחה ומקצועית עם לקוחות רגישות</h2>
         <div className={styles.courseInfo}>
-          <span>4 חלקים</span>
-          <span>3 שעות סה"כ</span>
+          <span>מפגש אחד</span>
+          <span>4 שעות סה"כ</span>
           <span>ידע מדעי + פתרונות מעשיים</span>
         </div>
         

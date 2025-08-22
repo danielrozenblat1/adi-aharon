@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import styles from './FormScreen.module.css';
+import PrivacyPolicy from '../components/privacy/Privacy';
 
 const FormScreen = () => {
   // State for validation errors
@@ -12,6 +13,7 @@ const FormScreen = () => {
   // State for form submission status
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [agreed, setAgreed] = useState(false);
 
   // Refs for form fields
   const fullNameRef = useRef(null);
@@ -23,9 +25,21 @@ const FormScreen = () => {
   const serverUrl = "https://dynamic-server-dfc88e1f1c54.herokuapp.com/leads/newLead";
   const reciver = "adikaacademy@gmail.com";
 
+  // פונקציה שמונעת מהטופס להגיב על קליק בקישור
+  const handlePrivacyClick = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+  };
+
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // בדיקה אם המשתמש אישר את תנאי השימוש ומדיניות הפרטיות
+    if (!agreed) {
+      alert("עליך לאשר את תנאי השימוש ומדיניות הפרטיות");
+      return;
+    }
     
     const name = fullNameRef.current.value;
     const phone = phoneRef.current.value;
@@ -104,6 +118,7 @@ const FormScreen = () => {
           reasonRef.current.value = "";
           emailRef.current.value = "";
           setSubmitted(false);
+          setAgreed(false);
         }, 3000);
       } else {
         throw new Error('Failed to submit form');
@@ -182,6 +197,43 @@ const FormScreen = () => {
               ref={emailRef}
               rows={4}
             />
+          </div>
+
+          {/* תיבת האישור למדיניות הפרטיות */}
+          <div style={{ 
+            display: "flex", 
+            justifyContent: "center", 
+            marginTop: "20px",
+            marginBottom: "20px"
+          }}>
+            <label style={{ 
+              direction: "rtl", 
+              fontFamily: "AssistantR", 
+              fontSize: "0.9rem", 
+              color:"black",
+              textAlign: "right", 
+              display: "flex", 
+              alignItems: "center", 
+              flexWrap: "wrap", 
+              gap: "5px" 
+            }}>
+              <input
+                type="checkbox"
+                checked={agreed}
+                onChange={() => setAgreed(!agreed)}
+                style={{ marginLeft: "10px" }}
+              />
+              קראתי את
+              <span onClick={handlePrivacyClick}>
+                    <PrivacyPolicy 
+  ownerName="עדי אהרון" 
+  email="adikaacademy@gmail.com " 
+  phone="+972 52-748-2778" 
+  domain="https://adikaacademy.co.il/" 
+/>
+              </span>
+              ואני מאשר/ת
+            </label>
           </div>
           
           <button 

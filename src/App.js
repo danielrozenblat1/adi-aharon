@@ -11,6 +11,7 @@ import FifthScreen from './screens/FifthScreen';
 import ByMe from './components/ByMe/ByMe';
 import NavBarNew from './components/CourseNav/NavBarNew';
 import Four from './components/Four/Four';
+import PrivacyPolicy from './components/privacy/Privacy';
 
 function App() {
   return <>
@@ -23,6 +24,12 @@ function App() {
   <ThirdScreen/>
 <ForthScreen/>
 <FifthScreen/>
+        <PrivacyPolicy 
+  ownerName="עדי אהרון" 
+  email="adikaacademy@gmail.com " 
+  phone="+972 52-748-2778" 
+  domain="https://adikaacademy.co.il/" 
+/>
 <ByMe/>
   </>
 }
